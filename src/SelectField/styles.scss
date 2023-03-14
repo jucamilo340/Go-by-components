@@ -1,0 +1,111 @@
+@import '../assets/styles/helpers/_variables.scss';
+@import '../assets/styles/helpers/_responsive.scss';
+
+.select {
+  margin-bottom: 16px;
+
+  &__label {
+    font-family: "roboto", Helvetica, Arial;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #FFFF;
+    padding-bottom: 3px;
+    text-align: left;
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__control {
+    position: relative;
+
+    select {
+      border: 1px solid #919BA1;
+      border-radius: 4px;
+      background-color: white;
+      appearance: none;
+      color: #494F66;
+      font-family: $font-lato;
+      font-weight: $font-regular;
+      font-size: 16px;
+      padding: 0 34px 0 16px;
+      width: 100%;
+      height: 45px;
+      box-sizing: border-box;
+      background-clip: padding-box;
+      position: relative;
+ 
+      &::-ms-expand {
+        display: none;
+      }
+
+      &:hover {
+        border-color: #2FAD6F;
+        z-index: 2;
+        transition: border-color 0.35s;
+      }
+
+      &:disabled {
+        background-color: $gray4;
+        color: $gray3;
+        opacity: 0.5;
+        pointer-events: none;
+        border: none;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: #2FAD6F;
+        z-index: 2;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      height: 8px;
+      width: 8px;
+      border-bottom: 1px #2FAD6F solid;
+      border-right: 1px #2FAD6F solid;
+      transform: translateY(-50%) rotate(45deg);
+      z-index: 2;
+      pointer-events: none;
+    }
+  }
+
+  &.is-selected {
+    select {
+      color: $gray1;
+    }
+  }
+
+  
+  &.is-disabled {
+    .select__control::after { border-color: $gray6; }
+  }
+
+  &.error {
+    position: relative;
+
+    .select__control {
+      margin-bottom: 0;
+
+      select {
+        border: 1px solid $pink;
+        margin-bottom: 0;
+        z-index: 2;
+
+        &:hover { border: 1px $pink solid; }
+      }
+    }
+
+    .error__msg {
+      display: block;
+    }
+  }
+}

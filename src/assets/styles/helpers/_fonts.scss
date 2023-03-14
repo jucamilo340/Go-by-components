@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'lato';
+    src: url('./assets/fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('./assets/fonts/lato-bold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'lato';
+    src: url('./assets/fonts/lato-light-webfont.woff2') format('woff2'),
+         url('./assets/fonts/lato-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'lato';
+    src: url('./assets/fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('./assets/fonts/lato-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'roboto';
+    src: url('./assets/fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('./assets/fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'roboto';
+    src: url('./assets/fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('./assets/fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'roboto';
+    src: url('./assets/fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('./assets/fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+ 
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'iconrimac', Arial, Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info:before {
+  content: "\e92b";
+}
+.icon-percent:before {
+  content: "\e92a";
+}
+.icon-home-small:before {
+  content: "\e929";
+}
+.icon-search:before {
+  content: "\e926";
+}
+.icon-children:before {
+  content: "\e927";
+}
+.icon-birthday:before {
+  content: "\e928";
+}
+.icon-wifi:before {
+  content: "\e925";
+}
+.icon-down:before {
+  content: "\e922";
+}
+.icon-star2:before {
+  content: "\e923";
+}
+.icon-star:before {
+  content: "\e924";
+}
+.icon-mail:before {
+  content: "\e921";
+}
+.icon-heart:before {
+  content: "\e91f";
+}
+.icon-heart2:before {
+  content: "\e920";
+}
+.icon-escudo:before {
+  content: "\e91e";
+}
+.icon-refresh:before {
+  content: "\e91d";
+}
+.icon-check2:before {
+  content: "\e91c";
+}
+.icon-auto:before {
+  content: "\e917";
+}
+.icon-casa:before {
+  content: "\e918";
+}
+.icon-maestria:before {
+  content: "\e919";
+}
+.icon-mas-hijos:before {
+  content: "\e91a";
+}
+.icon-viaje:before {
+  content: "\e91b";
+}
+.icon-question:before {
+  content: "\e911";
+}
+.icon-proteccion-inicial:before {
+  content: "\e912";
+}
+.icon-educacion-hijos:before {
+  content: "\e913";
+}
+.icon-ahorro-futuro:before {
+  content: "\e914";
+}
+.icon-credito-hipotecario:before {
+  content: "\e915";
+}
+.icon-jubilacion-padres:before {
+  content: "\e916";
+}
+.icon-arrow-next:before {
+  content: "\e910";
+}
+.icon-close-circle:before {
+  content: "\e90f";
+}
+.icon-exit:before {
+  content: "\e90e";
+}
+.icon-watchlist:before {
+  content: "\e90d";
+}
+.icon-address:before {
+  content: "\e90c";
+}
+.icon-check:before {
+  content: "\e90a";
+}
+.icon-close-light:before {
+  content: "\e90b";
+}
+.icon-close:before {
+  content: "\e908";
+}
+.icon-marker:before {
+  content: "\e905";
+}
+.icon-phone:before {
+  content: "\e906";
+}
+.icon-edit:before {
+  content: "\e907";
+}
+.icon-delete:before {
+  content: "\e909";
+}
+.icon-pointer:before {
+  content: "\e900";
+}
+.icon-user-plus:before {
+  content: "\e901";
+}
+.icon-logout:before {
+  content: "\e904";
+}
+.icon-calendar:before {
+  content: "\e902";
+}
+.icon-arrow-down:before {
+  content: "\e903";
+}

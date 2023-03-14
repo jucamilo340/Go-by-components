@@ -1,0 +1,44 @@
+@import './helpers/normalize.scss';
+@import './helpers/fonts.scss';
+@import './helpers/variables.scss';
+@import './helpers/utils.scss';
+@import './helpers/generic.scss';
+
+/* ------------------------------------------
+ *          Componente titles
+ * ------------------------------------------*/
+.title {
+  font-family: $font-lato;
+  font-weight: $font-light;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.2px;
+  color: $gray1;
+  margin: 0;
+  padding: 48px 0 15px;
+  @include tablet {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.6px;
+    padding-top: 64px;
+  }
+
+  strong {
+    font-weight: $font-regular;
+    color: $red;
+    display: inline-block;
+  }
+
+  &.has-back {
+    position: relative;
+    padding-top: 25px;
+    @include tablet {
+      padding-top: 48px !important;
+      margin-top: 0;
+    }
+    @include tablet-large {
+      padding-top: 64px !important;
+      //margin-top: 0;
+    }
+  }
+}

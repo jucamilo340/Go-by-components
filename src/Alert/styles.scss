@@ -1,0 +1,33 @@
+.alert {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position:fixed;
+    top: 1%;
+    &__panel{
+        background: white;
+        width: 313px;
+        transition: all .5s;
+        padding: 8px 12px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__textAlert{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        text-align: center;
+        color: #D92D20;       
+    }
+    &__alertWarImg {
+       width: 20px;
+       height: 20px;
+    }
+    &__closeImg {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+    }
+}

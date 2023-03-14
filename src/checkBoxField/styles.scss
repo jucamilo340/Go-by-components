@@ -1,0 +1,108 @@
+@import '../assets/styles/helpers/_variables.scss';
+.checkbox {
+  margin-bottom: 12px;
+  padding-top: 10px;
+  max-width: 95%;
+  label {
+    position: relative;
+    display: block;
+    padding-left: 24px;
+    min-height: 20px;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    text-align: left;
+
+    span {
+      font-family: $font-lato;
+      font-weight: $font-regular;
+      font-size: 15px;
+      line-height: 16px;
+      color: #FFF;
+    }
+
+    .check {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      border: 2px #2FAD6F solid;
+      border-radius: 4px;
+      height: 19px;
+      width: 19px;
+      box-sizing: border-box;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: none;
+        left: 5px;
+        top: 2px;
+        width: 6px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    input:checked ~ span {
+      color: #FFFF;
+    }
+
+    input:checked ~ .check::after {
+      display: block;
+    }
+
+    input:disabled ~ span {
+      color: $gray1;
+    }
+
+    input:disabled ~ .check {
+      border-color: $gray6;
+    }
+
+    input:checked ~ .check {
+      background-color: $green;
+      border: 1px $green solid;
+    }
+  }
+
+  &.error {
+    label {
+      input ~ .check {
+        border: 1px $pink solid;
+      }
+
+      input:checked ~ .check {
+        border: 1px $green solid;
+      }
+
+      input:checked ~ span {
+        color: $gray7;
+      }
+    }
+  }
+}
+
+.error .checkbox {
+  label {
+    input ~ .check {
+      border: 1px $pink solid;
+    }
+
+    input:checked ~ .check {
+      border: 1px $green solid;
+    }
+
+    input:checked ~ span {
+      color: $gray7;
+    }
+  }
+}
