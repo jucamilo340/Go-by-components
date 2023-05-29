@@ -18,7 +18,7 @@ interface InputTextProps extends FieldProps {
   placeholder?: string;
 }
 
-export const InputText = ({
+export const InputPassword = ({
   field,
   icon,
   disabled,
@@ -26,10 +26,12 @@ export const InputText = ({
   fnKeyUp,
   fnBlur,
   fnFocus,
+  className,
   form: { touched, errors },
   ...props
 }: InputTextProps) => {
   const [isFocus, setIsFocus] = useState(false);
+  const [visible, setVisible] = useState(false);
   const isDisabled = disabled || false;
   const { haserror = false } = props;
 
@@ -51,11 +53,7 @@ export const InputText = ({
   return (
     <div
       className={
-        'input ' +
-        (props.className ? ' ' + props.className : '') +
-        ((touched[field.name] && errors[field.name]) || haserror ? ' error' : '') +
-        (field.value || isFocus ? ' is-animated' : '') +
-        (icon ?? '')
+        'input password__container'
       }
     >
       {props.title && <div className="input__label">{props.title}</div>}
@@ -64,17 +62,16 @@ export const InputText = ({
         <input
           {...field}
           {...props}
-          onFocus={() => setIsFocus(true)}
+          //onFocus={() => setIsFocus(true)}
           disabled={isDisabled}
-          type={type ?? 'text'}
-          onBlur={(e) => handleBlur(e)}
+          type={visible ? 'text' : 'password'}
           value={field.value || ''}
           placeholder={props.placeholder || ''}
           onKeyUp={(e) => handleKeyUp(e)}
-          className={`${icon && 'input__pdImage'}`}
+          className='password__input'
         />
-        {icon && <img className="input__iconR" src={require(`../assets/images/${icon}.svg`).default} alt="" />}
-        {props.hasDelete && <div className="input__del" onClick={() => props.fnDelete()}></div>}
+        <img onClick={()=> setVisible(!visible)} src={visible ? require('../assets/images/eyeOpen.svg').default : require('../assets/images/eye.svg').default} className="img_eye" alt="" />
+        <img src={require('../assets/images/lock.svg').default} className="img_lock" alt="" />
       </div>
     </div>
   );

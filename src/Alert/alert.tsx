@@ -1,8 +1,7 @@
+import { Button } from '../index';
 import React from 'react';
 import './styles.scss';
 import { IAlert } from './i-alert';
-import warning from '../assets/images/warningAlert.svg';
-import close from '../assets/images/close.svg';
 
 export const Alert = (props: IAlert) => {
   const onClose = props.onClose;
@@ -14,9 +13,9 @@ export const Alert = (props: IAlert) => {
         <div
         className={`${show ? 'alert__panel' : 'global__hidden'}`}
         >
-           <img src={warning} className="alert__alertWarImg" alt="" />
+           <img src={require('../assets/images/warningAlert.svg').default} className="alert__alertWarImg" alt="" />
            <span className="alert__textAlert">{text}</span>
-           <img onClick={onClose} src={close} className="alert__alertWarImg" alt="" />
+           <img onClick={onClose} src={require('../assets/images/close.svg').default} className="alert__alertWarImg" alt="" />
       </div>
       </div>
     );

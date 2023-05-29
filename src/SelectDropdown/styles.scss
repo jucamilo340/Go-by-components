@@ -2,7 +2,7 @@
 @import '../assets/styles/helpers/_responsive.scss';
 
 .select {
-  margin-bottom: 16px;
+  margin-bottom: 0 !important;
 
   &__label {
     font-family: "roboto", Helvetica, Arial;
@@ -107,5 +107,80 @@
     .error__msg {
       display: block;
     }
+  }
+}
+
+.dropDown {
+  &__inputSelect {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 8px 10px 16px;
+    gap: 10px;
+    width: 100%;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #919BA1;
+    border-radius: 4px;
+    caret-color: white;
+  }
+  &__input {
+    width: 100%;
+    height: 42px;
+    background: #FFFFFF;
+    border: 1px solid #E3E6E8;
+    cursor: pointer;
+  }
+  &__inputP {
+    padding-left: 40px;
+  }
+  &__imgInput {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+  }
+  &__imgCont {
+    padding: 8px;
+    gap: 10px;
+    width: 36px;
+    height: 29.33px;
+    background: #F1F2F3;
+    box-shadow: 0px 0px 0px rgba(37, 182, 191, 0.1);
+    border-radius: 4px;
+  }
+  &__container {
+    position: relative;
+    width: 100%;
+  }
+  &__panel {
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    border: 1px solid #E3E6E8;
+    transition: transform 0.5s ease-in-out;
+  }
+  &__options {
+    overflow-y: scroll;
+    max-height: 250px;
+  }
+  &__opcion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 8px 10px 16px;
+    gap: 10px;
+    width: 100%;
+    height: 42px;
+    background: #FFFFFF;
+    &:hover {
+      background: #ebfaf3;
+    }
+  }
+}
+
+.global {
+  &__hidden {
+    display:none !important;
   }
 }

@@ -83,6 +83,27 @@
     content: '\e909';
   }
 }
+.img_lock {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  z-index: 2;
+}
+.img_eye {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  cursor: pointer;
+  z-index: 2;
+}
+.password__input {
+  padding-left: 40px !important;
+  position: inherit !important;
+  z-index: 1 !important;
+}
+.password__container {
+  margin-bottom: 0 !important;
+}
 .error__msg {
   display: none;
   font-family: $font-roboto;
@@ -111,16 +132,6 @@
 .input {
   margin-bottom: 16px;
   position: relative;
-
-  &__iconR {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    z-index: 2;
-  }
-  &__pdImage {
-    padding-left: 40px !important;
-  }
 
   &__label {
     font-family: $font-roboto;

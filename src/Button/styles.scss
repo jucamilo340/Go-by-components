@@ -10,11 +10,10 @@
   height: 52px;
   background: #2FAD6F;
   color: #E2F7ED;
-  font-family: $font-lato;
+  line-height: 160%;
   font-weight: $font-bold;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
-  text-transform: uppercase;
   text-align: center;
   border: 0;
   margin: 0;
@@ -31,7 +30,7 @@
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 
   &:hover {
-    background: $red2;
+    background: #2FAD6F;
     box-shadow: 0 4px 10px rgba(20, 43, 127, 0.25);
   }
 

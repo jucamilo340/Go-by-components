@@ -31,3 +31,9 @@
         cursor: pointer;
     }
 }
+
+.global {
+    &__hidden {
+        display:none !important;
+      }
+}

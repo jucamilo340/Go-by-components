@@ -1,8 +1,6 @@
-import { Button } from 'components';
+import { Button } from '../index';
 import React from 'react';
 import './style.scss';
-import ErrorModal from '../assets/images/ErrorModal.svg'
-import successModal from '../assets/images/success.svg'
 import { IModal } from './i-modal';
 
 export const Modal = (props: IModal) => {
@@ -16,11 +14,12 @@ export const Modal = (props: IModal) => {
 
   return  (
       <div className={`${!show ? 'global__hidden' : ''} modal`}>
+        <div className={`${!show ? 'global__hidden' : ''} modal__panel`}>
           <div className="modal__contImg">
               {success ? 
-              <img className="modal__imgModal" src={successModal} alt="" />
+              <img className="modal__imgModal" src={require('../assets/images/success.svg').default} alt="" />
                :
-               <img className="modal__imgModal" src={ErrorModal} alt="" />
+               <img className="modal__imgModal" src={require('../assets/images/ErrorModal.svg').default} alt="" />
               }
           </div>
           <h1 className="modal__titleModal">{title}</h1>
@@ -29,6 +28,7 @@ export const Modal = (props: IModal) => {
             {textbtn && <Button onClick={action} text={textbtn} className='global__btnGreenWP' />}
           </div>
           {onBack && <h2 onClick={onBack} className="modal__underline">Salir</h2>}
+      </div>
       </div>
     );
 };

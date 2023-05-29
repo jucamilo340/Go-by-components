@@ -1,10 +1,7 @@
 {
-  "name": "@Touch/Go-by-components",
-  "version": "1.0.1",
-  "description": "",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
+  "name": "@jucamilo340/go-by-components",
+  "version": "1.4.3",
+  "description": "Packages project Go-by touch",
   "main": "dist/index.js",
   "files": [
     "dist/**"
@@ -33,7 +30,6 @@
     "lint": "eslint src --ext js,ts,tsx",
     "lint:ci": "npm run lint:fix && npm run format && npm run sort",
     "lint:fix": "eslint src --ext js,ts,tsx --fix",
-    "prepare": "is-ci || husky install",
     "prepublishOnly": "npm run build:ci",
     "sort": "sort-package-json package.json",
     "test:unit": "jest --passWithNoTests",

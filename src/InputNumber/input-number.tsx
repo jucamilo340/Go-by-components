@@ -18,7 +18,7 @@ interface InputTextProps extends FieldProps {
   placeholder?: string;
 }
 
-export const InputText = ({
+export const InputNumber = ({
   field,
   icon,
   disabled,
@@ -26,12 +26,14 @@ export const InputText = ({
   fnKeyUp,
   fnBlur,
   fnFocus,
+  form,
   form: { touched, errors },
   ...props
 }: InputTextProps) => {
   const [isFocus, setIsFocus] = useState(false);
   const isDisabled = disabled || false;
   const { haserror = false } = props;
+  const [value, setValue] = useState(field.value || '');
 
   const handleBlur = (event: any) => {
     field.onBlur(event);
@@ -42,9 +44,20 @@ export const InputText = ({
     }
   };
 
-  const handleKeyUp = (event: any) => {
-    if (typeof fnKeyUp === 'function') {
-      fnKeyUp(event);
+  const handleChange = (e:any) => {
+    const inputValue = e.target.value;
+    // Remueve cualquier caracter que no sea número
+    const numericValue = inputValue.replace(/[^0-9]/g, '');
+    setValue(numericValue);
+    form.setFieldValue(field.name, numericValue);
+  };
+
+  const handleKeyPress = (e:any) => {
+    // Obtiene el código de la tecla presionada
+    const keyCode = e.keyCode || e.which;
+    // Permite solamente los caracteres de número (0-9) y el botón de retroceso (8)
+    if (keyCode < 48 || keyCode > 57) {
+      e.preventDefault();
     }
   };
 
@@ -68,9 +81,10 @@ export const InputText = ({
           disabled={isDisabled}
           type={type ?? 'text'}
           onBlur={(e) => handleBlur(e)}
-          value={field.value || ''}
           placeholder={props.placeholder || ''}
-          onKeyUp={(e) => handleKeyUp(e)}
+          value={value}
+          onChange={handleChange}
+          onKeyPress={handleKeyPress}
           className={`${icon && 'input__pdImage'}`}
         />
         {icon && <img className="input__iconR" src={require(`../assets/images/${icon}.svg`).default} alt="" />}

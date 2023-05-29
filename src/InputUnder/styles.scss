@@ -1,0 +1,15 @@
+.inputUnderLine{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: #525B61;
+    border-bottom: 3px solid #2FAD6F;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    caret-color: #2FAD6F;
+}
+
+input:focus {
+    outline: none;
+  }
