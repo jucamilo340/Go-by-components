@@ -1,6 +1,6 @@
 {
   "name": "@jucamilo340/go-by-components",
-  "version": "1.4.3",
+  "version": "1.5.8",
   "description": "Packages project Go-by touch",
   "main": "dist/index.js",
   "files": [
